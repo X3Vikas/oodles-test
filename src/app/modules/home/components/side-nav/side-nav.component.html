@@ -1,0 +1,90 @@
+<div class="wrapper">
+    <nav id="sidebar" [ngClass]="{'active':isToggle}">
+        <ng-container *ngIf="!isToggle;else noToggle">
+            <div class="sidebar-header">
+                <h5><img src="./assets/img/logo.png" style="width:60%"> <span (click)="toggle()" class="ml-5 cursor-pointer"><i class="fas fa-angle-double-left"></i></span> </h5>
+            </div>
+        </ng-container>
+        <ng-template #noToggle>
+            <h5 (click)="toggle()" class="cursor-pointer  pt-5"><i class="fas fa-angle-double-right"></i> </h5>
+        </ng-template>
+
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-grip-horizontal"></i> Applications
+                </a>
+                <ul class="collapse list-unstyled menus" id="homeSubmenu">
+                    <li>
+                        <a href="#userSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="selectHeader('Users')"> - Users</a>
+                        <ul class="collapse list-unstyled" id="userSubMenu">
+                            <li>
+                                <a>User List</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a (click)="selectHeader('Profile')"> - Profile</a>
+                    </li>
+                    <li>
+                        <a (click)="selectHeader('Contacts')"> - Contacts</a>
+                    </li>
+                    <li>
+                        <a (click)="selectHeader('Projects')"> - Projects</a>
+                    </li>
+                    <li>
+                        <a (click)="selectHeader('Suppert Center')"> - Suppert Center</a>
+                    </li>
+                    <li>
+                        <a (click)="selectHeader('Chart')"> - Chart</a>
+                    </li>
+                    <li>
+                        <a (click)="selectHeader('Todo')"> - Todo</a>
+                    </li>
+                    <li>
+                        <a (click)="selectHeader('Inbox')"> - Inbox</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>
+                    <i class="fas fa-briefcase"></i>
+                    About
+                </a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-copy"></i>
+                    Pages
+                </a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a>Page 1</a>
+                    </li>
+                    <li>
+                        <a>Page 2</a>
+                    </li>
+                    <li>
+                        <a>Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>
+                    <i class="fas fa-image"></i>
+                    Portfolio
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="fas fa-question"></i>
+                    FAQ
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="fas fa-paper-plane"></i>
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

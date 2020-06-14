@@ -1,0 +1,15 @@
+.custome-nav {
+  li {
+    margin-left: 35px;
+  }
+}
+.left-nav {
+  li:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+.search-nav {
+  li:not(:first-child) {
+    margin-left: 20px;
+  }
+}
